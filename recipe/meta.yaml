@@ -1,5 +1,5 @@
 {% set name = "FrictionQPotFEM" %}
-{% set version = "0.9.3" %}
+{% set version = "0.9.4" %}
 
 package:
   name: python-{{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/tdegeus/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: c0f8d077e91bcd9ba2dca18b662d825526dc0d549f054574ed770d673c63c1a9
+  sha256: e5b698f5865721e17cc7240bf8f6246841bb831073c4e84e3e7cd7fb06718e53
 
 build:
-  number: 2
+  number: 0
   script_env: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
   script: {{ PYTHON }} -m pip install . -vv
 
